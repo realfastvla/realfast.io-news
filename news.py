@@ -8,6 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route("/news/")
+@cross_origin()
 def index():
         news_files = os.listdir("news_files")
         news_files.sort()
